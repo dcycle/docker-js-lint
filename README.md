@@ -4,7 +4,7 @@ Lint Javascript with [JSHint](http://jshint.com/install/).
 
 For example:
 
-    docker run -v "$(pwd)"/example:/app/code dcycle/js-lint:2 --help
-    docker run -v "$(pwd)"/example:/app/code dcycle/js-lint:2 .
+    docker run --rm -v "$(pwd)"/example:/app/code dcycle/js-lint:2 --help
+    docker run --rm -v "$(pwd)"/example:/app/code dcycle/js-lint:2 .
 
 See [this project on the Docker Hub](https://hub.docker.com/r/dcycle/js-lint/).
