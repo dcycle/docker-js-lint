@@ -1,5 +1,5 @@
 ---
-version: 2
+version: 2.1
 jobs:
   build:
     # For continuous integration, create a virtual machine with Docker
