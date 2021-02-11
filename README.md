@@ -7,4 +7,5 @@ For example:
     docker run --rm -v "$(pwd)"/example:/app/code dcycle/js-lint:2 --help
     docker run --rm -v "$(pwd)"/example:/app/code dcycle/js-lint:2 .
 
-See [this project on the Docker Hub](https://hub.docker.com/r/dcycle/js-lint/).
+* [this project on the Docker Hub](https://hub.docker.com/r/dcycle/js-lint/).
+* [this project on GitHub](https://github.com/dcycle/docker-js-lint).
