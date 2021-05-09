@@ -6,6 +6,22 @@ For example:
 
     docker run --rm -v "$(pwd)"/example:/app/code dcycle/js-lint:2 --help
     docker run --rm -v "$(pwd)"/example:/app/code dcycle/js-lint:2 .
+    
+Using with ES6
+-----
+
+If you would like to use with ES6, you can create a file in in ./path/to/my/code/.jshintrc containing:
+
+    {
+      // Required for ./scripts/lint-js.sh
+      // See https://github.com/dcycle/docker-js-lint
+    
+      "esversion" : 6
+    }
+
+Then run:
+
+    docker run --rm -v "$(pwd)"/path/to/my/code:/app/code dcycle/js-lint:2 .
 
 Ignoring lines
 -----
