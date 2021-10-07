@@ -6,5 +6,34 @@ For example:
 
     docker run --rm -v "$(pwd)"/example:/app/code dcycle/js-lint:2 --help
     docker run --rm -v "$(pwd)"/example:/app/code dcycle/js-lint:2 .
+    
+Using with ES6
+-----
 
-See [this project on the Docker Hub](https://hub.docker.com/r/dcycle/js-lint/).
+If you would like to use with ES6, you can create a file in in ./path/to/my/code/.jshintrc containing:
+
+    {
+      // Required for ./scripts/lint-js.sh
+      // See https://github.com/dcycle/docker-js-lint
+    
+      "esversion" : 6
+    }
+
+Then run:
+
+    docker run --rm -v "$(pwd)"/path/to/my/code:/app/code dcycle/js-lint:2 .
+
+Ignoring lines
+-----
+
+In some cases, for example [if you are using chai](https://github.com/jshint/jshint/issues/3070), you might want to ignore certain lines.
+
+We consider it good practice to link to an issue explaining why you need to ignore a line, for example:
+
+    // https://github.com/jshint/jshint/issues/3070
+    /* jshint ignore:start */
+    expect(result).to.be.true;
+    /* jshint ignore:end */
+
+* [this project on the Docker Hub](https://hub.docker.com/r/dcycle/js-lint/).
+* [this project on GitHub](https://github.com/dcycle/docker-js-lint).
