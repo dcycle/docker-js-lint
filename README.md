@@ -16,7 +16,7 @@ If you would like to use with ES8, you can create a file in in ./path/to/my/code
       // Required for ./scripts/lint-js.sh
       // See https://github.com/dcycle/docker-js-lint
 
-      "esversion" : 68
+      "esversion" : 8
     }
 
 Then run:
