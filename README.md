@@ -4,24 +4,31 @@ Lint Javascript with [JSHint](http://jshint.com/install/).
 
 For example:
 
-    docker run --rm -v "$(pwd)"/example:/app/code dcycle/js-lint:2 --help
-    docker run --rm -v "$(pwd)"/example:/app/code dcycle/js-lint:2 .
-    
-Using with ES6
+    docker run --rm -v "$(pwd)"/example:/app/code dcycle/js-lint:3 --help
+    docker run --rm -v "$(pwd)"/example:/app/code dcycle/js-lint:3 .
+
+Using with ES8
 -----
 
-If you would like to use with ES6, you can create a file in in ./path/to/my/code/.jshintrc containing:
+If you would like to use with ES8, you can create a file in in ./path/to/my/code/.jshintrc containing:
 
     {
       // Required for ./scripts/lint-js.sh
       // See https://github.com/dcycle/docker-js-lint
-    
-      "esversion" : 6
+
+      "esversion" : 8
     }
 
 Then run:
 
-    docker run --rm -v "$(pwd)"/path/to/my/code:/app/code dcycle/js-lint:2 .
+    docker run --rm -v "$(pwd)"/path/to/my/code:/app/code dcycle/js-lint:3 .
+
+Ignoring file paths
+-----
+
+Add a file called ./path/to/my/code/.jshintignore containing:
+
+    **/ignore-me/**
 
 Ignoring lines
 -----
