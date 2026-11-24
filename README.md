@@ -1,4 +1,4 @@
-[![GitHub Actions](https://github.com/dcycle/docker-jenkins/actions/workflows/config.yml/badge.svg)](../../actions/workflows/config.yml)
+[![GitHub Actions](https://github.com/dcycle/docker-js-lint/actions/workflows/config.yml/badge.svg)](../../actions/workflows/config.yml)
 
 Lint Javascript with [JSHint](http://jshint.com/install/).
 
